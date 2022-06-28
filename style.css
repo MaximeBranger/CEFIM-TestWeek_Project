@@ -1,0 +1,275 @@
+/* ------------------------------------------------------------------------------------------------------
+ GENERALS
+ ------------------------------------------------------------------------------------------------------*/
+ html,
+body {
+    height: 100%;
+    min-height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+header {
+    height: 100px;
+    background-image: url('img/header.jpg');
+    color: white;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+}
+
+header h1 {
+    padding: 30px;
+    margin: 0;
+    text-align: center;
+}
+
+
+footer {
+    height: 100px;
+    background-color: rgb(86, 178, 0);
+    text-align: center;
+    color: white;
+    padding: 30px;
+    border-radius: 10px 10px 0 0;
+}
+footer p {
+    font-weight:100;
+}
+
+footer a:hover {
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------------------------------------
+ VEDETTES
+ ------------------------------------------------------------------------------------------------------*/
+.vedettes h1 {
+    margin-top: 50px;
+}
+
+/* ------------------------------------------------------------------------------------------------------
+ PANIER - CART - BASKET
+ ------------------------------------------------------------------------------------------------------*/
+#panier, #panier_empty {
+    color: white;
+}
+
+ #panier_empty {
+    position: fixed;
+    right: 25px;
+    bottom: 125px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(86, 178, 0);
+    border-radius: 15px;
+    text-align: center;
+    padding: 5px;
+}
+
+#panier {
+    position: fixed;
+    right: 25px;
+    bottom: 125px;
+    max-width: 25%;
+    min-height: 70px;
+    background-color: rgb(86, 178, 0);
+    border-radius: 15px;
+    text-align: left;
+    padding: 5px;
+    display: none;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+#panier .fa-bag-shopping {
+    margin-left: auto;
+    right: 0;
+}
+#panier a:hover {
+    cursor: pointer;
+}
+#panier .fa-bag-shopping,
+#panier_empty .fa-bag-shopping {
+    cursor: pointer;
+    font-size: 36px;
+}
+
+/* ------------------------------------------------------------------------------------------------------
+ ICONS
+ ------------------------------------------------------------------------------------------------------*/
+.fa-solid {
+    color: white;
+    font-size: 36px;
+}
+
+/* ------------------------------------------------------------------------------------------------------
+ PRODUCTS FILTER
+ ------------------------------------------------------------------------------------------------------*/
+
+.products_filter {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.products_filter input {
+    border: 5px solid rgb(86, 178, 0);
+    border-radius: 5px;
+    font-weight: bold;
+}
+.products_filter input:focus {
+    border: 2px solid rgb(86, 178, 0);
+    font-weight: bold;
+}
+
+.no_product {
+    display: none;
+    width: 100%;
+    margin-left: 100px;
+    font-size: 30px;
+    color: red;
+    margin-bottom: 100px;
+}
+
+/* ------------------------------------------------------------------------------------------------------
+ PRODUCTS
+ ------------------------------------------------------------------------------------------------------*/
+ .set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+ .featured__item {
+    margin-bottom: 50px;
+}
+
+.featured__item:hover .featured__item__pic .featured__item__pic__hover {
+    bottom: -10px;
+}
+
+.featured__item__pic {
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+    background-position: center center;
+    border-radius: 40px;
+}
+
+.featured__item__pic__hover {
+    position: absolute;
+    left: 0;
+    bottom: -80px;
+    width: 100%;
+    text-align: center;
+    -webkit-transition: all, 0.5s;
+    -moz-transition: all, 0.5s;
+    -ms-transition: all, 0.5s;
+    -o-transition: all, 0.5s;
+    transition: all, 0.5s;
+}
+
+.featured__item__pic__hover li {
+    list-style: none;
+    display: inline-block;
+}
+
+.featured__item__pic__hover li:hover i {
+    background: #ffffff;
+    border-color: rgb(86, 178, 0);
+    color: rgb(86, 178, 0);
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+.featured__item__pic__hover li i {
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    border: 1px solid #ebebeb;
+    background: rgb(86, 178, 0);
+    display: block;
+    -webkit-transition: all, 0.5s;
+    -moz-transition: all, 0.5s;
+    -ms-transition: all, 0.5s;
+    -o-transition: all, 0.5s;
+    transition: all, 0.5s;
+}
+
+.featured__item__pic__hover .fa-trash-can,
+.featured__item__pic__hover .fa-circle-minus,
+.featured__item__pic__hover .fa-circle-plus {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.featured__item__pic__hover .fa-trash-can,
+.featured__item__pic__hover .fa-circle-minus,
+.featured__item__pic__hover .fa-circle-plus,
+.featured__item__pic__hover #quantity {
+    display: none;
+}
+
+.featured__item__pic__hover .fa-cart-plus {
+    font-size: 30px;
+    height: 40px;
+    width: 200px;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    line-height: 40px;
+    border-radius: 5%;
+}
+
+.featured__item__text {
+    text-align: center;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.featured__item__text h6 {
+    margin-bottom: 10px;
+}
+
+.featured__item__text h6 a {
+    color: #252525;
+}
+
+.featured__item__text h5 {
+    font-weight: 700;
+    font-size: 35px;
+}
+
+.featured__item__text .promo {
+    color: red;
+    font-weight: 700;
+    font-size: 25px;
+    text-decoration: line-through;
+}
+
+/* ------------------------------------------------------------------------------------------------------
+ USELESS BUT FUNNY
+ ------------------------------------------------------------------------------------------------------*/
+ #easter_eggs {
+    display: none;
+    border: 3px solid rgb(86, 178, 0);
+    background-color:rgb(86, 178, 0);
+    border-radius: 5px;
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+ }
+ #easter_eggs h1 {
+     font-size: 25px;
+ }
+ 
+ #uselessbutfunny, #uselessbutfunny2, #uselessbutfunny3 {
+     display: none;
+    position: fixed;
+    right: 5%;
+    bottom: 25%;
+}

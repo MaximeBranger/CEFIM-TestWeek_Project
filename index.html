@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.3.0/font-awesome-animation.min.css">
+
+    <title>Accueil</title>
+</head>
+
+<body>
+    <header>
+        <h1>Fruits 'R' us</h1>
+    </header>
+    <div id="easter_eggs">
+        <h1>Bravo ! Vous avez découvert <strong class="easter_value">0</strong> surprise sur 3 !</h1>
+    </div>
+    <section class="vedettes">
+        <h1>Produits en vedette</h1>
+        <div class="row featured__filter">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" id="panier1">
+                        <ul class="featured__item__pic__hover"><li>
+                            <i class="fa fa-cart-plus" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-trash-can" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-circle-minus" onclick="product_action(this);"></i></li>
+                            <li class="quantity" id="quantity">1</li>
+                            <li><i class="fa fa-circle-plus" onclick="product_action(this);"></i></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6>Le panier du célibataire</h6>
+                        <h5>15€00</h5>
+                        <h5 class="promo">22€00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" id="panier2">
+                        <ul class="featured__item__pic__hover"><li>
+                            <i class="fa fa-cart-plus" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-trash-can" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-circle-minus" onclick="product_action(this);"></i></li>
+                            <li class="quantity" id="quantity">1</li>
+                            <li><i class="fa fa-circle-plus" onclick="product_action(this);"></i></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6>Le panier des parents responsables</h6>
+                        <h5>50€00</h5>
+                        <h5 class="promo">65€00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" id="coco">
+                        <ul class="featured__item__pic__hover"><li>
+                            <i class="fa fa-cart-plus" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-trash-can" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-circle-minus" onclick="product_action(this);"></i></li>
+                            <li class="quantity" id="quantity">1</li>
+                            <li><i class="fa fa-circle-plus" onclick="product_action(this);"></i></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6>La noix de coco déjà ouverte, c'est tellement plus simple !</h6>
+                        <h5>18€00</h5>
+                        <h5 class="promo">28€00</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="products">
+        <div class="products_filter">
+            <h1>Produits (<a id="articles_number"></a> articles)</h1>
+            <i class="fa-solid fa-filter"></i> Rechercher un produit : <input type="text" name="filter" id="filter"
+                onkeyup="recherche(this);">
+            <button onclick="confirm('test', selectCategorie(this));">Fruits</button>
+            <button onclick="selectCategorie(this);">Legumes</button>
+            </div>
+
+
+        <div class="row featured__filter">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" id="banane">
+                        <ul class="featured__item__pic__hover"><li>
+                            <i class="fa fa-cart-plus" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-trash-can" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-circle-minus" onclick="product_action(this);"></i></li>
+                            <li class="quantity" id="quantity">1</li>
+                            <li><i class="fa fa-circle-plus" onclick="product_action(this);"></i></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6>4 Bananes</h6>
+                        <h5>4€00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 Legumes">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" id="pomme">
+                        <ul class="featured__item__pic__hover"><li>
+                            <i class="fa fa-cart-plus" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-trash-can" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-circle-minus" onclick="product_action(this);"></i></li>
+                            <li class="quantity" id="quantity">1</li>
+                            <li><i class="fa fa-circle-plus" onclick="product_action(this);"></i></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6>2,25 Pommes</h6>
+                        <h5>2€50</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 Fruits">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" id="mangue">
+                        <ul class="featured__item__pic__hover"><li>
+                            <i class="fa fa-cart-plus" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-trash-can" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-circle-minus" onclick="product_action(this);"></i></li>
+                            <li class="quantity" id="quantity">1</li>
+                            <li><i class="fa fa-circle-plus" onclick="product_action(this);"></i></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6>2,5 Mangues épluchées</h6>
+                        <h5>13€00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 ">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" id="pasteque">
+                        <ul class="featured__item__pic__hover"><li>
+                            <i class="fa fa-cart-plus" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-trash-can" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-circle-minus" onclick="product_action(this);"></i></li>
+                            <li class="quantity" id="quantity">1</li>
+                            <li><i class="fa fa-circle-plus" onclick="product_action(this);"></i></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6>Pasteque en tranche, garantie sans pépin*</h6>
+                        <h5>8€99</h5>
+                        <em>*photo non contractuelle</em>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" id="poivron">
+                        <ul class="featured__item__pic__hover"><li>
+                            <i class="fa fa-cart-plus" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-trash-can" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-circle-minus" onclick="product_action(this);"></i></li>
+                            <li class="quantity" id="quantity">1</li>
+                            <li><i class="fa fa-circle-plus" onclick="product_action(this);"></i></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6>3 Poivrons (oui, ce sont des fruits !!)*</h6>
+                        <h5>0€50</h5>
+                        <em>*en fait non, mais on avait la photo</em>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" id="orange">
+                        <ul class="featured__item__pic__hover"><li>
+                            <i class="fa fa-cart-plus" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-trash-can" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-circle-minus" onclick="product_action(this);"></i></li>
+                            <li class="quantity" id="quantity">1</li>
+                            <li><i class="fa fa-circle-plus" onclick="product_action(this);"></i></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6>3 Oranges et quelques, avec les feuilles (pour la salade ?)</h6>
+                        <h5>5€60</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg" id="raisin">
+                        <ul class="featured__item__pic__hover"><li>
+                            <i class="fa fa-cart-plus" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-trash-can" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-circle-minus" onclick="product_action(this);"></i></li>
+                            <li class="quantity" id="quantity">1</li>
+                            <li><i class="fa fa-circle-plus" onclick="product_action(this);"></i></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6>9 grains de raisin, et pas un de plus !*</h6>
+                        <h5>45€00</h5>
+                        <em>*Grand cru bordelais</em>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg promotion" id="panier1">
+                        <ul class="featured__item__pic__hover"><li>
+                            <i class="fa fa-cart-plus" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-trash-can" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-circle-minus" onclick="product_action(this);"></i></li>
+                            <li class="quantity" id="quantity">1</li>
+                            <li><i class="fa fa-circle-plus" onclick="product_action(this);"></i></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6>Le panier du célibataire</h6>
+                        <h5>15€00</h5>
+                        <h5 class="promo">22€00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg promotion" id="panier2">
+                        <ul class="featured__item__pic__hover"><li>
+                            <i class="fa fa-cart-plus" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-trash-can" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-circle-minus" onclick="product_action(this);"></i></li>
+                            <li class="quantity" id="quantity">1</li>
+                            <li><i class="fa fa-circle-plus" onclick="product_action(this);"></i></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6>Le panier des parents responsables</h6>
+                        <h5>50€00</h5>
+                        <h5 class="promo">65€00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg promotion" id="coco">
+                        <ul class="featured__item__pic__hover"><li>
+                            <i class="fa fa-cart-plus" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-trash-can" onclick="product_action(this);"></i></li>
+                            <li><i class="fa fa-circle-minus" onclick="product_action(this);"></i></li>
+                            <li class="quantity" id="quantity">1</li>
+                            <li><i class="fa fa-circle-plus" onclick="product_action(this);"></i></li>
+                        </ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6>La noix de coco déjà ouverte, c'est tellement plus simple !</h6>
+                        <h5>18€00</h5>
+                        <h5 class="promo">28€00</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="no_product">Aucun produit ne correspond à votre recherche.</div>
+        </div>
+    </section>
+
+    <footer>
+        <i class="fa-solid fa-user"></i>
+        <a onclick="alert('Demande à Thomas !');">Notre équipe</a>
+        <p>CEFIM 2022 © Alexis <big>Maxime</big> Thomas </p>
+
+    </footer>
+    <div id="uselessbutfunny">
+        <img src="img/vahine.gif">
+    </div>
+    <div id="uselessbutfunny2">
+        <img src="img/money.gif">
+    </div>
+    <div id="uselessbutfunny3">
+        <img src="img/drunk.gif">
+    </div>
+    <div id="panier_empty">
+        <i class="fa-solid fa-bag-shopping" onclick="displayBasket(true);"></i>
+    </div>
+    <div id="panier">
+        <div id="articles">
+        </div>
+        <i id="prices">0.00 € (0 produits)</i>
+        <br>
+        <a onclick="alert('Demande à Alexis !');">Accèder à mon panier</a> <i class="fa-solid fa-bag-shopping"
+            onclick="displayBasket(false);"></i>
+    </div>
+</body>
+
+</html>
+
+<script src="scripts.js"></script>
+<script src="https://kit.fontawesome.com/94ea9d9e31.js" crossorigin="anonymous"></script>
